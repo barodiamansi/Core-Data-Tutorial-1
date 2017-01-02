@@ -9,5 +9,5 @@
 #import "Employee.h"
 
 @interface Employee (Add)
-
++ (Employee *)addEmployeeDetails:(NSDictionary *)employeeData;
 @end

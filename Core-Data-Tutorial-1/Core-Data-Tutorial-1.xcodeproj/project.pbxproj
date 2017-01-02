@@ -15,7 +15,6 @@
 		75D8DC201E18B08700E11B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D8DC1E1E18B08700E11B22 /* Main.storyboard */; };
 		75D8DC231E18B08700E11B22 /* Core_Data_Tutorial_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75D8DC211E18B08700E11B22 /* Core_Data_Tutorial_1.xcdatamodeld */; };
 		75D8DC251E18B08700E11B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D8DC241E18B08700E11B22 /* Assets.xcassets */; };
-		75D8DC281E18B08700E11B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D8DC261E18B08700E11B22 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,7 +149,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75D8DC281E18B08700E11B22 /* LaunchScreen.storyboard in Resources */,
 				75D8DC251E18B08700E11B22 /* Assets.xcassets in Resources */,
 				75D8DC201E18B08700E11B22 /* Main.storyboard in Resources */,
 			);

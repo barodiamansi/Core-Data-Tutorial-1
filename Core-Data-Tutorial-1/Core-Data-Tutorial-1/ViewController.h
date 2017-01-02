@@ -10,11 +10,5 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIView *firstNameLabel;
-@property (strong, nonatomic) IBOutlet UIView *lastNameLabel;
-@property (strong, nonatomic) IBOutlet UIView *employeeIdLabel;
-
-
-
 @end
 

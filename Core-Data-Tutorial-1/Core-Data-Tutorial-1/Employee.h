@@ -12,7 +12,7 @@
 
 @interface Employee : NSManagedObject
 
-@property (nonatomic) int64_t employeeId;
+@property (nullable, nonatomic, copy) NSString *employeeId;
 @property (nullable, nonatomic, copy) NSString *experience;
 @property (nullable, nonatomic, copy) NSString *firstName;
 @property (nullable, nonatomic, copy) NSString *lastName;
