@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class EmployeeDetails;
+
 @interface EmployeeDetailsTableViewController : UITableViewController
+
+@property (nonatomic, strong) EmployeeDetails *employeeDetails;
 
 @end

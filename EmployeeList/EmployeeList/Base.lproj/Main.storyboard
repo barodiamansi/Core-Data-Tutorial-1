@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Qbu-OK-j0t" kind="show" id="saO-ha-xRo"/>
+                                    <segue destination="Qbu-OK-j0t" kind="show" identifier="EmployeeListSegue" id="saO-ha-xRo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="956" y="113.79310344827587"/>
         </scene>
-        <!--Employee List Table View Controller-->
+        <!--Employee List-->
         <scene sceneID="0kK-BM-6o1">
             <objects>
                 <tableViewController id="Qbu-OK-j0t" customClass="EmployeeListTableViewController" sceneMemberID="viewController">
@@ -82,7 +82,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="N1L-w4-cKO" kind="show" id="A7i-8h-zJX"/>
+                                    <segue destination="N1L-w4-cKO" kind="show" identifier="EmployeeDetailsSegue" id="A7i-8h-zJX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -91,58 +91,67 @@
                             <outlet property="delegate" destination="Qbu-OK-j0t" id="LkL-p0-Iuf"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem systemItem="add" id="sxA-Bq-oZG">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Employee List" id="imk-4P-DmC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="klg-GX-4Sa">
                             <connections>
-                                <action selector="addEmployeeDetails:" destination="Qbu-OK-j0t" id="KRk-OU-S7e"/>
+                                <action selector="addEmployeeDetails:" destination="Qbu-OK-j0t" id="LsH-QQ-BAv"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4Q-dA-FVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1588" y="112.89355322338831"/>
         </scene>
-        <!--Employee Details Table View Controller-->
+        <!--Employee Details-->
         <scene sceneID="dlb-Rp-Tdd">
             <objects>
                 <tableViewController id="N1L-w4-cKO" customClass="EmployeeDetailsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="fnu-oW-L2w">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="fnu-oW-L2w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="employeeDetails" id="lEC-sj-ZB9">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lEC-sj-ZB9" id="2vG-NB-ijo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6S-RZ-HD6">
-                                            <rect key="frame" x="16" y="5" width="343" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <sections>
+                            <tableViewSection id="EnX-Bl-STi">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="employeeDetails" id="lEC-sj-ZB9">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lEC-sj-ZB9" id="2vG-NB-ijo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6S-RZ-HD6">
+                                                    <rect key="frame" x="16" y="5" width="343" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="N1L-w4-cKO" id="cGa-7q-1p9"/>
                             <outlet property="delegate" destination="N1L-w4-cKO" id="Ng6-3i-MrL"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem systemItem="save" id="5lF-7g-bho">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Employee Details" id="TBL-op-rTR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fCq-fS-k6c">
                             <connections>
-                                <action selector="saveEmployeDetails:" destination="N1L-w4-cKO" id="cuO-mF-Mqg"/>
+                                <action selector="saveEmployeDetails:" destination="N1L-w4-cKO" id="GsU-Bk-KaN"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="Z6S-RZ-HD6" id="sUu-cm-eNJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKc-Je-cgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

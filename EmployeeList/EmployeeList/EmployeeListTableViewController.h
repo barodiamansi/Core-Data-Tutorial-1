@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DeptEmployeeList;
+
 @interface EmployeeListTableViewController : UITableViewController
+
+@property (nonatomic, strong) DeptEmployeeList *employeeList;
 
 @end
