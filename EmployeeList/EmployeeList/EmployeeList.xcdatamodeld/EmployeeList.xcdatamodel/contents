@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="DeptEmployeeList" representedClassName="DeptEmployeeList" syncable="YES" codeGenerationType="class">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="employeeName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EmployeeDetails" inverseName="list" inverseEntity="EmployeeDetails" syncable="YES"/>
+    </entity>
+    <entity name="EmployeeDetails" representedClassName="EmployeeDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DeptEmployeeList" inverseName="employees" inverseEntity="DeptEmployeeList" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DeptEmployeeList" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="EmployeeDetails" positionX="241" positionY="72" width="128" height="88"/>
+    </elements>
+</model>
